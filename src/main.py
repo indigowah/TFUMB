@@ -26,5 +26,9 @@ if __name__ == "__main__":
 
     load_dotenv()
     
-    client = bot.tfumb()
+    default_cogs = [
+        "devtools.ping",
+        "devtools.latency",
+    ]
+    client = bot.tfumb(default_cogs=default_cogs)
     client.run(getenv("DISCORD_TOKEN"))
