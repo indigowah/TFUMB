@@ -6,9 +6,7 @@ import typing
 
 class tfumb(commands.Bot):
     def __init__(self, default_cogs : typing.List[str] = None):
-        self.default_cogs = [
-            "devtools.ping",
-        ]
+        self.default_cogs = default_cogs
         self.logger = logging.getLogger()
         intents = discord.Intents.default()
         intents.members = True  # Server Members intent (privileged)
